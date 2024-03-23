@@ -25,73 +25,15 @@
   --fw-bold: 600;
 }
 
-/* css reset  */
-/* 1. Use a more-intuitive box-sizing model.
-*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/*
-  2. Remove default margin
-*/
 * {
   margin: 0;
-}
-
-/*
-  Typographic tweaks!
-  3. Add accessible line-height
-  4. Improve text rendering
-*/
-body {
-  line-height: 1.43;
-  -webkit-font-smoothing: antialiased;
-}
-
-/*
-  5. Improve media defaults
-*/
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-/*
-  6. Remove built-in form typography styles
-*/
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/*
-  7. Avoid text overflows
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-/*
-  8. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
+  padding: 0;
 }
 
 body {
@@ -106,35 +48,37 @@ body {
 main {
   display: grid;
   gap: 4.75rem;
-  padding: 0 2rem;
+  margin: 5.31rem 2rem;
 }
 
 .intro {
-  margin: 0 auto;
   max-width: 33.75rem;
   display: grid;
   gap: 1rem;
+  margin: 0 auto;
   text-align: center;
 }
 
-.title {
+.title,.brand, .card-title {
   font-size: 1.25rem;
-  font-weight: 300;
+}
+
+.brand, .card-title {
+  font-weight: var(--fw-bold);
   letter-spacing: 0.01044rem;
 }
 
-.brand {
-  font-size: 1.25rem;
-  font-weight: 600;
+.title {
+  font-weight: 300;
 }
 
 .about {
   font-size: 0.9375rem;
   line-height: 166.667%;
+  letter-spacing: 0.0065rem;
 }
 
-.about, .card-content {
-  letter-spacing: 0.0065rem;
+.about,.card-content {
   opacity: 0.5;
 }
 
@@ -152,13 +96,8 @@ main {
   box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.50);
 }
 
-.card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
 .card-content {
-  font-size:0.8125rem;
+  font-size: var(--fs-secondary);
   line-height: 176.923%;
   letter-spacing: 0.00563rem;
 }
@@ -185,13 +124,14 @@ main {
 }
 
 @media (min-width: 90rem) {
-
+  
   main {
-    padding: 0;
+    margin: 0;
   }
-
-  .title, .brand {
-    font-size: 2.25rem;
+  
+  .title,
+  .brand {
+    font-size: var(--fs-primary);
     letter-spacing: 0.01563rem;
   }
 
