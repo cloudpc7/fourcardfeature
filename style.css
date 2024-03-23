@@ -37,10 +37,7 @@
 }
 
 body {
-  min-height: 100vh;
   display: grid;
-  align-items: center;
-  justify-content: center;
   font-family: var(--ff-primary);
   color: var(--clr-gray);
 }
@@ -124,6 +121,11 @@ main {
 }
 
 @media (min-width: 90rem) {
+
+  body {
+    justify-content: center;
+    margin-top: 5rem;
+  }
   
   main {
     margin: 0;
